@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landmark Website</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        .w3-sidebar {
+            background: linear-gradient(135deg, #4c669f, #3b5998, #192f6a);
+            color: #fff;
+        }
+
+        .w3-bar-item i {
+            color: #f1f1f1;
+            transition: color 0.3s ease;
+        }
+
+        .w3-bar-item.w3-button {
+            color: #f1f1f1;
+            border-radius: 8px;
+            margin: 4px 0;
+            transition: background 0.3s ease;
+        }
+
+        .w3-bar-item.w3-blue {
+            background-color: #6fa1f2 !important;
+        }
+
+        .w3-bar-item.w3-button:hover {
+            background-color: #3b5998;
+            color: #fff;
+        }
+
+        .w3-circle {
+            border: 2px solid #f1f1f1;
+        }
+
+        .header {
+            padding-top: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .card h4 {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .card i {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-red {
+            background-color: #f44336;
+        }
+
+        .card-blue {
+            background-color: #2196F3;
+        }
+
+        .card-teal {
+            background-color: #009688;
+        }
+
+        .card-orange {
+            background-color: #FF9800;
+        }
+
+        .content {
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ol li {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            transition: background-color 0.3s;
+        }
+
+        ol li:hover {
+            background: #e8f5e9;
+        }
+
+        @media (max-width: 600px) {
+            .w3-quarter {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-animate-left" style="z-index: 3; width: 300px;" id="mySidebar">
+        <br>
+        <div class="w3-container w3-row">
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>To Landmark Website</strong></span><br>
+            </div>
+        </div>
+        <hr style="border-color: #f1f1f1;">
+        <div class="w3-container">
+            <h5>Menu</h5>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-hover-black" onclick="w3_close()"
+                title="close menu"><i class="fa fa-remove fa-fw"></i> Close Menu</a>
+            <a href="/Landmark/map.html" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-eye fa-fw"></i> Map</a>
+            <a href="/Landmark/PSU.html" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-users fa-fw"></i> Contact Us</a>
+            <div class="menu-item w3-bar-item w3-button w3-padding">
+                <i class="fa fa-eye fa-fw"></i> Services
+                <div class="submenu">
+                    <a href="#">Name</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Landmark</a>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </nav>
+
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px; margin-top: 43px;">
+        <h1 style="font-weight: bold; text-align: center; color: #37315a;">LANDMARK</h1>
+
+        <div class="w3-row-padding w3-margin-bottom">
+            <a href="/Landmark/phuketImage.html">
+                <div class="w3-quarter">
+                    <div class="w3-container card card-red">
+                        <i class="fa fa-comment"></i>
+                        <h4>View Phuket</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Landmark/chart.html">
+                <div class="w3-quarter">
+                    <div class="w3-container card card-blue">
+                        <i class="fa fa-pie-chart"></i>
+                        <h4>Charts</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Landmark/seach.html">
+                <div class="w3-quarter">
+                    <div class="w3-container card card-teal">
+                        <i class="fa fa-search"></i>
+                        <h4>Search</h4>
+                    </div>
+                </div>
+            </a>
+
+            <div class="w3-quarter">
+                <a href="/Landmark/contact.html" style="text-decoration: none;">
+                    <div class="w3-container card card-orange">
+                        <i class="fa fa-users"></i>
+                        <h4>Contact</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Types of Tourist Attractions in Thailand</h2>
+            <p>The Tourism Authority of Thailand categorizes tourist attractions into the following 12 types:</p>
+
+            <ol>
+                <li><strong>🌳 Eco-tourism:</strong> Attractions that emphasize the unique local ecosystem, promoting environmental conservation with community involvement.</li>
+                <li><strong>🏛️ Arts and Sciences Educational Attractions:</strong> Sites offering specialized knowledge like museums, science centers, and MICE (Meetings, Incentives, Conventions, Exhibitions).</li>
+                <li><strong>🏺 Historical Attractions:</strong> Places of historical, archaeological, or religious importance, such as ancient ruins, temples, and museums.</li>
+                <li><strong>🏞️ Natural Attractions:</strong> Scenic sites with natural beauty, like geological formations and unique environmental features.</li>
+                <li><strong>🎢 Recreational Attractions:</strong> Man-made places for leisure, like zoos, theme parks, and entertainment districts.</li>
+                <li><strong>🎭 Cultural Attractions:</strong> Sites showcasing Thai arts, traditions, and customs, including festivals and traditional performances.</li>
+                <li><strong>💧 Health and Natural Hot Springs:</strong> Hot springs focused on health, safety, and environmental preservation.</li>
+                <li><strong>🏖️ Beaches and Marine Attractions:</strong> Coastal regions, islands, and marine activities like diving and snorkeling.</li>
+                <li><strong>🌆 Urban Attractions:</strong> City-based attractions, including shopping centers, parks, and recreational areas.</li>
+                <li><strong>🚶 Adventure Attractions:</strong> Sites for outdoor activities such as trekking, rock climbing, and water sports.</li>
+                <li><strong>🏞️ Agricultural Tourism:</strong> Experiences centered around local agriculture, including farm visits and food production tours.</li>
+                <li><strong>🏕️ Family-Oriented Attractions:</strong> Activities and places suitable for families, such as playgrounds, aquariums, and family-friendly parks.</li>
+            </ol>
+            <br>
+
+            <p>
+                [![Netlify Status](https://api.netlify.com/api/v1/badges/aa89bc69-5590-4736-9ba7-2d8fae924b88/deploy-status)](https://app.netlify.com/sites/landmarks-place/deploys)
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Open and close the sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
